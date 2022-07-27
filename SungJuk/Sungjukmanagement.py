@@ -16,7 +16,7 @@ eng = int(input("English Score: "))
 math = int(input("Math Score: "))
 phy = int(input("Physics Score: "))
 score_sum = kor + eng + math + phy
-average = sum / 4
+average = score_sum / 4
 blank = '%-2s' %''
 
 def sungjuk():

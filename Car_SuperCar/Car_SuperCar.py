@@ -1,3 +1,10 @@
+'''
+2022.07.28
+프로그램명: Car_SuperCar.py
+설명:
+Car클래스를 부모클래스로, SuperCar클래스를 자식클래스로 하는 프로그램
+'''
+
 class Car :
     def __init__(self, color, speed = 0) :
         self.color = color
