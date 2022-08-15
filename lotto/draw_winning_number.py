@@ -10,3 +10,9 @@ def generate_numbers(n):
     return numbers
 
 print(generate_numbers(5))
+
+def draw_winning_numbers():
+    draw_list = generate_numbers(7)
+    return sorted(draw_list[:6]) + draw_list[6:]
+    
+print(draw_winning_numbers())
