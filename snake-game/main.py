@@ -37,12 +37,20 @@ while game_on:
         game_on = False
         score.game_over()
     
-    # Detext collision with tail
+    '''
+    # Detect collision with tail
     for body in snake.snake:
         if body == snake.head:
             pass
         elif snake.head.distance(body) < 10:
             game_on = False
             score.game_over()
-
+    '''
+    
+    # slicing 이용해서 'Detect collision with tail' code 간소화
+    for body in snake.snake[1:]:
+        if snake.head.distance(body) < 10:
+            game_on = False
+            score.game_over()
+    
 screen.exitonclick()
