@@ -34,8 +34,8 @@ while game_on:
     
     # Detect collision with wall
     if snake.head.xcor() > 300 or snake.head.xcor() < -300 or snake.head.ycor() > 300 or snake.head.ycor() < -300:
-        game_on = False
-        score.game_over()
+        score.reset()
+        snake.reset()
     
     '''
     # Detect collision with tail
@@ -50,7 +50,7 @@ while game_on:
     # slicing 이용해서 'Detect collision with tail' code 간소화
     for body in snake.snake[1:]:
         if snake.head.distance(body) < 10:
-            game_on = False
-            score.game_over()
+            score.reset()
+            snake.reset()
     
 screen.exitonclick()
