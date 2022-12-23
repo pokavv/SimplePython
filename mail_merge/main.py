@@ -1,3 +1,11 @@
+'''
+project name: mail_merge
+date: 2022-12-24
+description: A simple automation project that creates a new letter text file for each name by inserting the text of the invited names file into the text of the starting letter file as a variable.
+
+'''
+##########################################################################
+
 PLACEHOLDER = '[name]'
 
 with open('./mail_merge/Input/Names/invited_names.txt') as name_file:
