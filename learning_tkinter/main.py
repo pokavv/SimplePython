@@ -5,6 +5,9 @@ window = tk.Tk()
 window.title('GUI test')
 window.minsize(width=500, height=400)
 
+# grid(column=1, row=1) 
+# grid(): row와 column으로 위치 설정, 앞줄에 설정된 grid()가 없으면 자리채움
+
 # label
 my_label = tk.Label(text='Hello World', font=('Arial', 24, 'italic'))
 my_label.pack()
@@ -55,7 +58,7 @@ def checkbtn_used():
 chk_state = tk.IntVar()
 chk_btn = tk.Checkbutton(text='체크할거야?', variable=chk_state, command=checkbtn_used)
 chk_state.get()
-chk_btn.pack()
+chk_btn.place(x=30, y=100) # place(): pack() method보다 더 정교하게 조정가능
 
 # radiobutton
 def radio_used():
