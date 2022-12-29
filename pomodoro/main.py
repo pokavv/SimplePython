@@ -71,7 +71,7 @@ title.grid(column=1, row=0)
 canvas = Canvas(width=200, height=224, bg=YELLOW, highlightthickness=0)
 image_tomato = PhotoImage(file='./pomodoro/tomato.png')
 canvas.create_image(100, 112, image=image_tomato)
-timer_text = canvas.create_text(100, 130, text='pomodoro', fill='white', font=(FONT_NAME, 20, 'bold'))
+timer_text = canvas.create_text(100, 130, text='Let\'s go!', fill='white', font=(FONT_NAME, 20, 'bold'))
 canvas.grid(column=1, row=1)
 
 start_btn = Button(text='Start', highlightthickness=0, command=clickStart)
