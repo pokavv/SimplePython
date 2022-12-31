@@ -9,9 +9,9 @@ def clickStart():
     global repeat
     repeat += 1
     
-    work = WORK_MIN * 60 # 25min
-    short_break = SHORT_BREAK_MIN * 60 # 5min
-    long_break = LONG_BREAK_MIN * 60 # 20min
+    work = WORK_MIN // 2 # 25min
+    short_break = SHORT_BREAK_MIN # 5min
+    long_break = LONG_BREAK_MIN // 2 # 20min
     
     if repeat % 8 == 0:
         winsound.PlaySound('./pomodoro/stop-rest.wav', winsound.SND_ASYNC)
