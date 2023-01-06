@@ -15,7 +15,7 @@ screen = turtle.Screen()
 screen.title('U.S. state quiz')
 screen.setup(width=800, height=500)
 
-img = './us-state-map-quiz/data/blank_states_img.gif'
+img = 'us-state-map-quiz/data/blank_states_img.gif'
 screen.addshape(img)
 turtle.shape(img)
 
