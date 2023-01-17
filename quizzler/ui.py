@@ -46,11 +46,29 @@ class QuizInterface:
         self.window.mainloop()
     
     def next_question(self):
-        question_text = self.quiz.next_question()
-        self.canvas.itemconfig(self.question_text, text=question_text)
+        if self.quiz.still_questions():
+            self.canvas.config(bg='white')
+            self.score_label.config(text=f'Score: {self.quiz.score}')
+            question_text = self.quiz.next_question()
+            self.canvas.itemconfig(self.question_text, text=question_text)
+        else:
+            self.canvas.itemconfig(
+                                self.question_text,
+                                text='Quiz End'
+                                )
+            self.true_btn.config(state='disabled')
+            self.false_btn.config(state='disabled')
     
     def true_pressed(self):
-        self.quiz.check_answer('True')
+        self.feedback(self.quiz.check_answer('True'))
     
     def false_pressed(self):
-        self.quiz.check_answer('False')
+        is_right = self.quiz.check_answer('False')
+        self.feedback(is_right)
+    
+    def feedback(self, is_right):
+        if is_right:
+            self.canvas.config(bg='green')
+        else:
+            self.canvas.config(bg='red')
+        self.window.after(1000, self.next_question) # 1 sec
