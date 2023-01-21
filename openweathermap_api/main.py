@@ -1,6 +1,3 @@
-#Note! For the code to work you need to replace all the placeholders with
-#Your own details. e.g. account_sid, lat/lon, from/to phone numbers.
-
 import requests
 import os
 from twilio.rest import Client
@@ -12,8 +9,8 @@ account_sid = "YOUR ACCOUNT SID"
 auth_token = os.environ.get("AUTH_TOKEN")
 
 weather_params = {
-    "lat": "YOUR LATITUDE",
-    "lon": "YOUR LONGITUDE",
+    "lat": 36.6424341,
+    "lon": 127.4890319,
     "appid": api_key,
     "exclude": "current,minutely,daily"
 }
@@ -30,6 +27,8 @@ for hour_data in weather_slice:
     if int(condition_code) < 700:
         will_rain = True
 
+# twilio doc : sms
+
 if will_rain:
     proxy_client = TwilioHttpClient()
     proxy_client.session.proxies = {'https': os.environ['https_proxy']}
@@ -37,8 +36,8 @@ if will_rain:
     client = Client(account_sid, auth_token, http_client=proxy_client)
     message = client.messages \
         .create(
-        body="It's going to rain today. Remember to bring an ☔️",
-        from_="YOUR TWILIO VIRTUAL NUMBER",
-        to="YOUR TWILIO VERIFIED REAL NUMBER"
+        body="오늘 비가 옵니다. 우산을 챙기세요!",
+        from_="virtual number",
+        to="real number"
     )
     print(message.status)
