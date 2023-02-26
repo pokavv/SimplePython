@@ -17,4 +17,6 @@ class NotificationManager:
             from_=TWILIO_VIRTUAL_NUMBER,
             to=TWILIO_VERIFIED_NUMBER,
         )
+        
+        # if success
         print(message.sid)
