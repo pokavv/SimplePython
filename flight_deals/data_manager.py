@@ -1,7 +1,7 @@
 from pprint import pprint
 import requests
 
-SHEETY_PRICES_ENDPOINT = 'MY SHEETY PRICES ENDPOINT'
+SHEETY_PRICES_ENDPOINT = 'My endpoint'
 
 
 class DataManager:
