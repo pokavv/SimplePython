@@ -1,0 +1,28 @@
+body {
+    background-color: antiquewhite;
+}
+
+hr {
+    border-style: none;
+    border-top-style: dotted;
+    border-color: brown;
+    border-width: 5px;
+    width: 90%;
+}
+
+h1 {
+    color: chocolate;
+}
+
+h2 {
+    color: tan;
+}
+
+#name {
+    color: tomato;
+}
+
+.contact-link {
+    text-decoration-line: none;
+
+}
