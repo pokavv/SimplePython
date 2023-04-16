@@ -1,25 +1,38 @@
 body {
     margin: 0;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace
+    font-family: 'Courier New', Courier, monospace;
 }
 
 h1 {
+    color: #66BFBF;
     margin-top: 0;
+    font-size: 1em;
+    font-weight: bold;
 }
 
-.top {
+.top-container {
+    color: #66BFBF;
+    line-height: 2;
     position: relative;
-    background-color: aquamarine;
+    background-color: antiquewhite;
+    margin-top: 50px;
     padding-top: 100px
 }
 
-.middel-container {
-
+.middle-container {
+    color: #11999E;
 }
 
 .bottom-container {
-    
+    color: #11999E;
+}
+
+.skill-row {
+    margin: 100px auto 100px auto;
+    width: 50%;
+    clear: left;
+    line-height: 2;
 }
 
 .sea {
